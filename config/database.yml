@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: browsecTest_development
+
+test:
+  <<: *default
+  database: browsecTest_test
+
+production:
+  <<: *default
+  database: browsecTest_production
+  username: admin
+  password: password
